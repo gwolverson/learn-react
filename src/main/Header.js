@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = () => (
-    <div class="navbar">
+    <div className="navbar">
     <p>Learn React</p>
   </div>
 )

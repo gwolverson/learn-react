@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CurrencyAmountInput = () => (
+const CurrencyAmountInput = ({handleChange}) => (
     <div>
-        <label for='amount'>Amount to Convert</label><br/>
-        <input id='amount' type='text' name='amount'/><br/>
+        <label htmlFor='amount'>Amount to Convert</label><br/>
+        <input id='amount' type='text' name='amount' onChange={handleChange}/><br/>
     </div>
 )
 

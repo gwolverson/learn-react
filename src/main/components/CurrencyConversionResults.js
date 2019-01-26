@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CurrencyConversionResults = () => (
+const CurrencyConversionResults = ({amount, result, fromCurrencyKey, toCurrencyKey}) => (
     <div className='conversion-results-container'>
-        <p>100 GBP converted into USD is:</p>
-        <p id='result'>132</p>
+        <p>{amount} {fromCurrencyKey} converted into {toCurrencyKey} is:</p>
+        <p id='result'>{result}</p>
     </div>
 )
 
