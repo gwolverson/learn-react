@@ -6,7 +6,7 @@ const PrimaryLayout = ({children}) => (
         <Header/>
         <main>
             {children}
-            </main>
+        </main>
     </div>
 )
 
