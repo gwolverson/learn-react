@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CurrencyFromSelection = ({currencies}) => {
+const CurrencySelect = ({selectionType, currencies}) => {
  
     let currencyOptions = [];
     for(let key in currencies) {
@@ -9,13 +9,13 @@ const CurrencyFromSelection = ({currencies}) => {
     }
 
     return (
-        <div className='fromCurrencySelection'>
-            <label for='fromCurrency'>From</label><br/>
-            <select id='fromCurrency'>
+        <div className={`${selectionType}Selection`}>
+            <label for={selectionType}>From</label><br/>
+            <select id={selectionType}>
                 {currencyOptions}
             </select><br/>
         </div>
     )
 }
 
-export default CurrencyFromSelection;
+export default CurrencySelect;
