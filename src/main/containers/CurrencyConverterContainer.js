@@ -10,7 +10,8 @@ class CurrencyConverterContainer extends Component {
         amount: 0,
         fromCurrency: null,
         toCurrency: null,
-        result: 0
+        result: null,
+        promptSelection: false
     }
 
     handleChange = event => this.setState({amount: event.target.value})
@@ -29,12 +30,16 @@ class CurrencyConverterContainer extends Component {
         const fromCurrency = this.state.fromCurrency;
         const toCurrency = this.state.toCurrency;
 
-        // Just stops it blowing up - not going to worry about error handling yet...
         if(toCurrency !== null && fromCurrency !== null) {
             const conversion = this.state.amount / fromCurrency[1] * toCurrency[1]
             const result = Math.round(conversion * 100) / 100;
-            this.setState({result})
-        } 
+            this.setState({
+                result,
+                promptSelection: false
+            })
+        } else {
+            this.setState({promptSelection: true})
+        }
     }
 
     render() {
@@ -50,12 +55,17 @@ class CurrencyConverterContainer extends Component {
                         data={data}
                     />
                 </div>
-                <CurrencyConversionResults 
-                    amount={this.state.amount}
-                    fromCurrencyKey={this.state.fromCurrency && this.state.fromCurrency[0]}
-                    toCurrencyKey={this.state.toCurrency && this.state.toCurrency[0]}
-                    result={this.state.result}
-                />
+                {this.state.promptSelection &&
+                    <p>Please enter an amount and select both a from and to currency to convert.</p>
+                }
+                {this.state.result &&
+                    <CurrencyConversionResults 
+                        amount={this.state.amount}
+                        fromCurrencyKey={this.state.fromCurrency && this.state.fromCurrency[0]}
+                        toCurrencyKey={this.state.toCurrency && this.state.toCurrency[0]}
+                        result={this.state.result}
+                    />
+                }
             </div>
         )
     }
