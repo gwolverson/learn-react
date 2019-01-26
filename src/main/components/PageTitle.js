@@ -1,3 +1,3 @@
 import React from 'react';
 
-export const PageTitle = () => <h1 id='pageTitle'>Currency Converter</h1>;
+export const PageTitle = ({text}) => <h1 id='pageTitle'>{text}</h1>;

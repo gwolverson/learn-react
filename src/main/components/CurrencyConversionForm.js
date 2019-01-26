@@ -3,12 +3,12 @@ import CurrencyFromSelection from './form/CurrencyFromSelection';
 import CurrencyToSelection from './form/CurrencyToSelection';
 import CurrencyAmountInput from './form/CurrencyAmountInput';
 
-const CurrencyConversionForm = () => (
+const CurrencyConversionForm = ({data}) => (
     <div className='form-container'>
         <form id='currencyConversionForm'>
             <CurrencyAmountInput/>
-            <CurrencyFromSelection/>
-            <CurrencyToSelection/>
+            <CurrencyFromSelection currencies={data.rates}/>
+            <CurrencyToSelection currencies={data.rates}/>
             <button id='convertCurrency' type='submit'>Convert</button>
         </form>
     </div>
