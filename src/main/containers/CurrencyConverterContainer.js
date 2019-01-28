@@ -2,16 +2,23 @@ import React, { Component } from 'react';
 import { PageTitle } from '../components/PageTitle';
 import CurrencyConversionForm from '../components/CurrencyConversionForm';
 import CurrencyConversionResults from '../components/CurrencyConversionResults';
-import data from '../../data/sample_rates.json';
+import {fetchRates} from '../api/currencyApi';
 
 class CurrencyConverterContainer extends Component {
 
     state = {
+        data: null,
         amount: 0,
         fromCurrency: null,
         toCurrency: null,
         result: null,
         promptSelection: false
+    }
+
+    componentDidMount() {
+        fetchRates(response => {
+            this.setState({data: response})
+        })
     }
 
     handleChange = event => this.setState({amount: event.target.value})
@@ -52,7 +59,7 @@ class CurrencyConverterContainer extends Component {
                         handleChange={this.handleChange}
                         handleSelect={this.handleSelect}
                         handleSubmit={this.handleSubmit}
-                        data={data}
+                        data={this.state.data}
                     />
                 </div>
                 {this.state.promptSelection &&

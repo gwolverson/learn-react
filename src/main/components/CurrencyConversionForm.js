@@ -8,12 +8,12 @@ const CurrencyConversionForm = ({data, handleChange, handleSelect, handleSubmit}
             <CurrencyAmountInput handleChange={handleChange}/>
             <CurrencySelect
                 selectionType='fromCurrency'
-                currencies={data.rates}
+                currencies={data && data.rates}
                 handleSelect={handleSelect}
             />
             <CurrencySelect
                 selectionType='toCurrency'    
-                currencies={data.rates}
+                currencies={data && data.rates}
                 handleSelect={handleSelect}
             />
             <button id='convertCurrency' type='submit'>Convert</button>
