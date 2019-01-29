@@ -1,3 +1,16 @@
+## Course Order
+
+The course will take the following order branch wise:
+
+1. starting-point
+2. first-component
+3. breaking-it-down
+4. introducing-props
+5. more-modularity
+6. state-and-event-handling
+7. fetching-real-data
+8. conditional-rendering
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
