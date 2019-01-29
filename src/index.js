@@ -2,13 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import App from './main/App';
-import PrimaryLayout from './main/layouts/PrimaryLayout';
-import './main/styles/styles.css';
 
 ReactDOM.render(
-    <PrimaryLayout>
-        <App />
-    </PrimaryLayout>,
+    <App />,
     document.getElementById('root')
 );
 

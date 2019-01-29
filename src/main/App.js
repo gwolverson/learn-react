@@ -1,6 +1,5 @@
 import React from 'react';
-import CurrencyConverterContainer from './containers/CurrencyConverterContainer';
 
-const App = () => <CurrencyConverterContainer/>
+const App = () => <h1>Learn React</h1>
 
 export default App;
