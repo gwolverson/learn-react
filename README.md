@@ -11,6 +11,16 @@ The course will take the following order branch wise:
 7. fetching-real-data
 8. conditional-rendering
 
+### Useful VSCode Extensions
+
+- Auto close tag
+- Auto import
+- Auto rename tag
+- HTML Snippets
+- ES6 Snippets
+- React Food Truck (this one is ace!)
+- ReactJS code snippets
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
