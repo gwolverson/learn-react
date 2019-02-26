@@ -18,7 +18,7 @@ The course will take the following order branch wise:
 - Auto rename tag
 - HTML Snippets
 - ES6 Snippets
-- React Food Truck (this one is ace!)
+- React Food Truck
 - ReactJS code snippets
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
