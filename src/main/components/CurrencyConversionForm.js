@@ -16,7 +16,7 @@ const CurrencyConversionForm = ({data, handleChange, handleSelect, handleSubmit}
                 currencies={data && data.rates}
                 handleSelect={handleSelect}
             />
-            <button id='convertCurrency' type='submit'>Convert</button>
+            <button class="btn btn-primary" id='convertCurrency' type='submit'>Convert</button>
         </form>
     </div>
 )

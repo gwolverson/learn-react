@@ -10,10 +10,14 @@ const CurrencySelect = ({selectionType, currencies, handleSelect}) => {
 
     return (
         <div className={`${selectionType}Selection`}>
-            <label htmlFor={selectionType}>From</label><br/>
-            <select id={selectionType} onChange={handleSelect}>
-                {currencyOptions}
-            </select><br/>
+            <div className="input-group mb-3">
+                <div className="input-group-prepend">
+                    <label className="input-group-text" htmlFor={selectionType}>From</label>
+                </div>
+                <select className="custom-select" id={selectionType} onChange={handleSelect}>
+                    {currencyOptions}
+                </select>
+            </div>
         </div>
     )
 }
